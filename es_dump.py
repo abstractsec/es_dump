@@ -59,12 +59,12 @@ def dump_index(client, index, dst):
         while True:
             attempts += 1
             try:
-                out_file = bz2.BZ2File(out_file_path, "w")
                 logging.info("Dumping %s / %s...", index, dtype)
+                out_file = bz2.BZ2File(out_file_path, "w")
                 records = dump_docs(client, index, dtype, out_file)
                 break
             except EsError:
-                if attempts >= 3:
+                if attempts > 3:
                     raise DumpError("ERROR Failed to dump %s/%s" % (index, dtype))
                 else:
                     logging.error("ERROR Failed to dump %s/%s (attempt %d/3), retrying...",
