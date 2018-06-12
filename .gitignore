@@ -1,2 +1,5 @@
 .vscode
 **.json.bz2
+
+**.pyc
+__pycache__

@@ -36,21 +36,6 @@ optional arguments:
   -vv                   very verbose logging
 ```
 
-## validate_output.py
-Validate the data you dumped with `es_dump.py`
-```
-usage: validate_output.py [-h] [-v] [folder]
-
-A script that validates the output of es_dump.py
-
-positional arguments:
-  folder      destination folder (default: ./output/)
-
-optional arguments:
-  -h, --help  show this help message and exit
-  -v          verbose logging
-```
-
 ## Tips
 get completed indicies 
 ```
